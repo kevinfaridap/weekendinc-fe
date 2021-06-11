@@ -1,0 +1,26 @@
+img.profile{
+  max-width: 53px;
+  min-width: 33px;
+}
+
+p{
+  font-family: 'Work Sans';
+  color: #000000;
+}
+
+p.greeting-teks{
+  font-size: 1.3vw;
+  margin-bottom: 0;
+}
+
+p.name{
+  font-size: 1.5vw;
+  font-weight: 900 !important;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) { 
+  p{
+    font-size: 20px !important;
+  }
+ }

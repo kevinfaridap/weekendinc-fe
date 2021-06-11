@@ -1,0 +1,131 @@
+div.main{
+  background-color: black;
+  margin-top: -32px;  
+  font-family: 'Work Sans';
+  text-align: center;
+  padding-bottom: 225px;
+}
+
+h4.title{
+  color: rgba(255, 255, 255, 0.945);
+  font-style: bold;
+  font-weight: 900;
+  font-size: 2.7vw;
+}
+
+p.description{
+  color: rgba(255, 255, 255, 0.781);
+  max-width: 550px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 27px;
+  letter-spacing: -0.64px;
+  font-weight: 400;
+}
+
+img.additional-img{
+  position: relative;
+  right: -35vw;
+  margin-top: -350px;
+}
+
+div.bg-help-description{
+  background-color: black;
+  opacity: 0.5;
+  max-width: 311px;
+  min-height: 72px;
+  text-align: center !important;
+  margin: -71px auto;
+  padding: 12px;
+}
+
+p.help-description{
+  color: white;
+  font-weight: 600;
+  max-width: 218px;
+  text-align: left !important;
+}
+
+button.help-btn{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  float: right;
+  margin-top: -4vw;
+}
+
+img.help-image{
+  max-width: 311px;
+  max-height: 176px;
+}
+
+h1.title-help-tips{
+  color: white;
+  font-weight: 800;
+}
+
+div.help-box{
+  position: relative;
+  z-index: 2;
+}
+
+img.robot-image{
+  position: absolute;
+  left: 0;
+  margin-top: -100px;
+}
+
+
+@media (max-width: 576px) { 
+  div.main{
+    padding-bottom: 375px;
+  }
+
+  h4.title{
+    font-style: bold;
+    font-weight: 900;
+    font-size: 22px; 
+    text-align: left !important;
+    margin: 0 32px;
+  }
+
+  p.description{
+    text-align: left !important;
+    margin: 0 32px;
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.829);
+  }
+
+  img.additional-img{
+    display: none;
+  }
+
+  h1.title-help-tips{
+    font-size: 22px;
+    text-align: left !important;
+    margin: 0 32px;
+  }
+
+  button.help-btn{
+    margin-top: -55px;
+  }
+  
+  p.help-description{
+    color: white;
+    font-weight: 600;
+    font-size: 16px !important;
+  }
+
+  img.help-image{
+    max-width: 280px;
+    max-height: 176px;
+  }
+
+  img.robot-image{
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+  }
+  
+}

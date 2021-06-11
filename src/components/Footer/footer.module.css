@@ -1,0 +1,45 @@
+div.footer-bg{
+  background-color: #0b24fb;
+  height: 67px;
+  margin-top: -32px;
+  padding: 24px;
+}
+
+p.company-name{
+  font-family: 'Work Sans';
+  color: white;
+  margin-left: 55px;
+}
+
+strong.strong{
+  color: white;
+}
+
+div.version{
+  border: 2px solid white;
+  max-width: 146px;
+  min-width: 146px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 20px;
+}
+
+@media (max-width: 576px) { 
+  div.footer-bg{
+    padding-bottom: 60px !important;
+  }
+
+  p.company-name{
+    font-size: 4.5vw !important; 
+    margin-left: 5px;
+  }
+
+  div.version{
+    right: 5px;
+    max-width: 146px;
+    font-size: 4.5vw !important; 
+    min-width: 146px;
+  }
+}

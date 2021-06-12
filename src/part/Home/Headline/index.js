@@ -3,6 +3,10 @@ import style from './headline.module.css'
 import {robotheadline} from '../../../assets/index'
 
 function Headline() {
+  const onContentClick = (value) =>{
+    const element = document.getElementById(`content${value}`);
+    element.scrollIntoView();
+  }
   return (
     <div>
      <div className={[["jumbotron"], ["jumbotron-fluid"], style['headline']].join(' ')}>
@@ -11,7 +15,7 @@ function Headline() {
           <p className={style['description']}>Stay active with a little workout.</p>
           <img className={style['head-robot']} src={robotheadline} alt="" />
           <br />
-          <button className={style['btn']}>Let's Go</button>
+          <button className={style['btn']} onClick={()=>onContentClick(1)} >Let's Go</button>
         </div>
       </div>
     </div>

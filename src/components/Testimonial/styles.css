@@ -1,0 +1,111 @@
+.App {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    top: -390px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: -500px;
+  }
+  
+  h1.title-testimoni{
+    font-family: 'Work Sans';
+    font-size: 42px;
+    font-weight: 900;
+    font-style: bold;
+    color: white;
+  }
+
+  .rectangle{
+    width: 247px;
+    height: 140px;
+    margin: 0 5px 0 0;
+    padding: 15px;
+    box-shadow: 0 -10px 20px 0 rgba(249, 131, 171, 0.2);
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  h4.by{
+    font-family: 'Work Sans';
+    font-size: 1.6vw;
+    font-weight: 900;
+    font-style: bold;
+    text-align: left;
+  }
+
+  p.testimony{
+    font-family: 'Work Sans';
+    font-size: 0.9vw;
+    font-weight: 300;
+    text-align: left;
+  }
+  
+  .carousel-wrapper {
+    width: 100%;
+  }
+  
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 0px #eebece;
+  }
+  
+  .rec.rec-arrow{
+    background-color: #0b24fb;
+    color: white;
+    outline: none;
+  }
+
+  .rec.rec-arrow:hover {
+    background: #eebece !important;
+    color: black;
+  }
+
+  button.rec-dot{
+    background-color: #0b24fb;
+    /* box-shadow: 0 0 1px 3px white; */
+  }
+
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px white;
+  }
+
+
+  @media (max-width: 576px) { 
+    .App {
+      height: 100vh;
+      position: relative;
+      top: -350px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: -490px;
+    }
+
+    .rectangle{
+      max-width: 247px;
+      min-width: 246px;
+      max-height: 140px;
+      min-height: 139px;
+      margin: 0 5px 0 0;
+      padding: 15px 5px 15px 0px;
+      border-radius: 20px !important;
+    }
+
+    p.testimony{
+      padding-left: 25px;
+      font-size: 12px !important;
+      font-weight: 300;
+      text-align: left;
+      float: left !important;
+    }
+
+    h4.by{
+      padding-left: 25px;
+      font-size: 20px !important;
+    }
+  
+  }

@@ -1,9 +1,22 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import style from './main.module.css'
 import {additionalImage,robotMain , helpButton} from '../../../assets/index'
+import CarouselTestimony from "../../../components/Testimonial";
+// import {useSelector, useDispatch} from 'react-redux'
+// import {helpAndTips} from '../../../configs/actions/help' 
 
 function Main({povDescription, resourceDescription}) {
+  
+  //======== IF Want To Use Redux ========
+  // const getHelpTips = useSelector((state)=>state.helps)
+  // const getHelpAndTips = getHelpTips.helps
+  // const dispatch =  useDispatch()
+  // useEffect(()=>{
+  //   dispatch(helpAndTips())
+  // }, [helpAndTips]);
+  
+  // ========= CHANGED TO REDUX ========
   const [getHelpAndTips, setGetHelpAndTips] = useState([]);
 
   useEffect(()=>{
@@ -22,32 +35,33 @@ function Main({povDescription, resourceDescription}) {
     <div>
       <div className={[["jumbotron"], ["jumbotron-fluid"], style['main']].join(' ')}>
         <div className="container">
-          <h4 className={style["title"]}>POV</h4>
+          <CarouselTestimony />
+          <h4 className={[style["title"]].join(' ')}>POV</h4>
           <p className={style["description"]}>{povDescription}</p>
           <br />
           <h4 className={[style["title"], ['mt-5']].join(' ')}>Resource</h4>
           <p className={style["description"]}>{resourceDescription}</p>
           <br />
+
           {/* Start Help & Tips */}
           <h1 className={[style["title-help-tips"], ['mt-5']].join(' ')}>Helps & Tips</h1>
           <div className="row mt-5 justify-content-center">
-          {getHelpAndTips !== undefined ? getHelpAndTips.map((item)=>{
-          return (
-          <>
-            <div className={[["col-lg-3.5"],["mr-lg-4"], style['help-box']].join(' ')}>
-              <img className={style["help-image"]} src={item.image} alt="" />
-              <div className={style["bg-help-description"]}>
-                <p className={style["help-description"]}>{item.title}</p>
-                <button className={style["help-btn"]}>
-                  <img src={helpButton} alt="" />
-                </button>
-              </div>
-            </div>
-          </>
-          )
-          }) : null} 
+            {getHelpAndTips !== undefined ? getHelpAndTips.map((item, i)=>{
+              return (
+                <div key={i} className={[["col-lg-3.5"],["mr-lg-4"], style['help-box']].join(' ')} >
+                  <img className={style["help-image"]} src={item.image} alt="" />
+                  <div key={i}  className={style["bg-help-description"]}>
+                    <p className={style["help-description"]}>{item.title}</p>
+                    <button className={style["help-btn"]}>
+                      <img src={helpButton} alt="" />
+                    </button>
+                  </div>
+                </div>
+              )
+            }) : null} 
           </div>
           {/* End Help & Tips */}
+
           <img className={style['additional-img']} src={additionalImage} alt="" />
           <br />
           <h4 className={[style["title"], ['mt-5']].join(' ')}>You’re all set.</h4>

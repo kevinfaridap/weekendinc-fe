@@ -1,6 +1,8 @@
 img.profile{
   max-width: 53px;
   min-width: 33px;
+  margin: 10px 25px 0 0;
+  margin-left: 30px !important;
 }
 
 p{

@@ -3,6 +3,9 @@ import axios from "axios";
 import style from './main.module.css'
 import {additionalImage,robotMain , helpButton} from '../../../assets/index'
 import CarouselTestimony from "../../../components/Testimonial";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 // import {useSelector, useDispatch} from 'react-redux'
 // import {helpAndTips} from '../../../configs/actions/help' 
 
@@ -18,7 +21,6 @@ function Main({povDescription, resourceDescription}) {
   
   // ========= CHANGED TO REDUX ========
   const [getHelpAndTips, setGetHelpAndTips] = useState([]);
-
   useEffect(()=>{
     axios.get(`https://wknd-take-home-challenge-api.herokuapp.com/help-tips`)
     .then((res)=>{
@@ -28,6 +30,8 @@ function Main({povDescription, resourceDescription}) {
     .catch((err)=>{
       console.log(err);
     })
+
+    Aos.init({duration: 3000})
   }, [])
 
 
@@ -36,11 +40,11 @@ function Main({povDescription, resourceDescription}) {
       <div className={[["jumbotron"], ["jumbotron-fluid"], style['main']].join(' ')}>
         <div className="container">
           <CarouselTestimony />
-          <h4 className={[style["title"]].join(' ')}>POV</h4>
-          <p className={style["description"]}>{povDescription}</p>
+          <h4 data-aos="fade-right" className={[style["title"]].join(' ')}>POV</h4>
+          <p data-aos="fade-right" className={style["description"]}>{povDescription}</p>
           <br />
-          <h4 className={[style["title"], ['mt-5']].join(' ')}>Resource</h4>
-          <p className={style["description"]}>{resourceDescription}</p>
+          <h4 data-aos="fade-right" className={[style["title"], ['mt-5']].join(' ')}>Resource</h4>
+          <p data-aos="fade-right" className={style["description"]}>{resourceDescription}</p>
           <br />
 
           {/* Start Help & Tips */}
@@ -62,11 +66,11 @@ function Main({povDescription, resourceDescription}) {
           </div>
           {/* End Help & Tips */}
 
-          <img className={style['additional-img']} src={additionalImage} alt="" />
+          <img data-aos="fade-left" className={style['additional-img']} src={additionalImage} alt="" />
           <br />
-          <h4 className={[style["title"], ['mt-5']].join(' ')}>You’re all set.</h4>
-          <p className={style["description"]}>The wise man therefore always holds in these matters to this principle of selection.</p>
-          <img className={style['robot-image']} src={robotMain} alt="" />
+          <h4 data-aos="fade-right" className={[style["title"], ['mt-5']].join(' ')}>You’re all set.</h4>
+          <p data-aos="fade-right" className={style["description"]}>The wise man therefore always holds in these matters to this principle of selection.</p>
+          <img data-aos="fade-right" className={style['robot-image']} src={robotMain} alt="" />
         </div>
       </div>
     </div>
